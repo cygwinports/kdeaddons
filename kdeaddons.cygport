@@ -1,0 +1,25 @@
+inherit kde3
+
+NAME="kdeaddons"
+VERSION=3.5.10
+RELEASE=11
+CATEGORY="KDE"
+SUMMARY="KDE 3 additional components"
+DESCRIPTION="kdeaddons contains additional plugins and scripts for some KDE
+applications."
+
+DO_NOT_COMPILE="kaddressbook-plugins kate kfile-plugins kicker-applets
+		knewsticker-scripts konq-plugins ksig noatun-plugins
+		renamedlgplugins doc"
+
+PKG_NAMES="atlantikdesigner"
+atlantikdesigner_CATEGORY="Games"
+atlantikdesigner_CONTENTS="
+	etc/postinstall/${NAME}.sh
+	usr/bin/atlantikdesigner.exe
+	usr/share/applications/kde/atlantikdesigner.desktop
+	usr/share/apps/atlantikdesigner/
+	usr/share/doc/atlantikdesigner/
+	usr/share/icons/hicolor/*/apps/atlantikdesigner.*
+"
+PKG_IGNORE="usr/share/doc/${NAME}/"
